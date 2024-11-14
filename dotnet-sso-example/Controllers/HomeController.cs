@@ -60,8 +60,8 @@ namespace WorkOS.SSOExampleApp.Controllers
                     var options = new GetAuthorizationURLOptions
                     {
                         ClientId = Environment.GetEnvironmentVariable("WORKOS_CLIENT_ID"),
-                        Organization = "YOUR_ORGANIZATION_ID",
-                        RedirectURI = "https://localhost:5001/Home/Callback/",
+                        Organization = "org_01JBCS0QECEQWVT6BKA0B5DCEQ",
+                        RedirectURI = "https://localhost:5001/Home/Callback",
                     };
                     // Call GetAuthorizationURL and store the resulting URL in a `url` variable.
                     string url = ssoService.GetAuthorizationURL(options);
@@ -82,7 +82,7 @@ namespace WorkOS.SSOExampleApp.Controllers
             {
                 ClientId = Environment.GetEnvironmentVariable("WORKOS_CLIENT_ID"),
                 Provider = provider,
-                RedirectURI = "https://localhost:5001/Home/Callback/",
+                RedirectURI = "https://localhost:5001/Home/Callback",
             };
 
             // Call GetAuthorizationURL and store the resulting URL in a `url` variable.
